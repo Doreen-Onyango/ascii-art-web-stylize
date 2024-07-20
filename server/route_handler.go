@@ -1,11 +1,11 @@
-package webAscii
+package stylize
 
 import (
 	"fmt"
 	"html/template"
 	"net/http"
 
-	send "webAscii/utils"
+	send "stylize/utils"
 )
 
 func Handl(w http.ResponseWriter, r *http.Request) {

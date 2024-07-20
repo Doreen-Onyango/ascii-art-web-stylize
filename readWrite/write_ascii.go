@@ -1,4 +1,4 @@
-package webAscii
+package stylize
 
 import (
 	"fmt"

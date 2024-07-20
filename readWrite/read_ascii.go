@@ -1,4 +1,4 @@
-package webAscii
+package stylize
 
 import (
 	"bufio"
@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	send "webAscii/utils"
+	send "stylize/utils"
 )
 
 var files = map[string]bool{

@@ -1,10 +1,10 @@
-package webAscii
+package stylize
 
 import (
 	"net/http"
 	"strings"
 
-	send "webAscii/utils"
+	send "stylize/utils"
 )
 
 func printWord(word string, asciiArtGrid [][]string) string {

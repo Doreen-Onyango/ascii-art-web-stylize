@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	webAscii "webAscii/server"
+	webAscii "stylize/server"
 )
 
 func TestAsciiServer_MethodNotAllowed(t *testing.T) {

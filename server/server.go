@@ -1,13 +1,13 @@
-package webAscii
+package stylize
 
 import (
 	"fmt"
 	"net/http"
 
-	check "webAscii/checksum"
-	print "webAscii/printAscii"
-	output "webAscii/readWrite"
-	send "webAscii/utils"
+	check "stylize/checksum"
+	print "stylize/printAscii"
+	output "stylize/readWrite"
+	send "stylize/utils"
 )
 
 var banners = map[string]string{

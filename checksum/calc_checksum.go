@@ -1,4 +1,4 @@
-package webAscii
+package stylize
 
 import (
 	"crypto/sha256"
@@ -7,7 +7,8 @@ import (
 	"io"
 	"net/http"
 	"os"
-	send "webAscii/utils"
+
+	send "stylize/utils"
 )
 
 var expectedChecksum = map[string]string{

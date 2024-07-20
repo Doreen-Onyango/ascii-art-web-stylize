@@ -3,7 +3,7 @@ package tests
 import (
 	"testing"
 
-	output "webAscii/readWrite"
+	output "stylize/readWrite"
 )
 
 func TestReadAscii(t *testing.T) {

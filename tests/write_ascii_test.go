@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	output "webAscii/readWrite"
+	output "stylize/readWrite"
 )
 
 func TestWriteAscii(t *testing.T) {
