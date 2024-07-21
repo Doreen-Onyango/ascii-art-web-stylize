@@ -1,9 +1,9 @@
 package stylize
 
 import (
-	"fmt"
 	"html/template"
 	"net/http"
+	"path/filepath"
 
 	send "stylize/utils"
 )
@@ -13,13 +13,15 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	tmpl, err := template.ParseFiles("./templates/index.html")
+	path := filepath.Join("..", "templates", "index.html")
+	tmpl, err := template.ParseFiles(path)
 	if err != nil {
 		send.SendError(w, "Error 404: PAGE NOT FOUND", http.StatusNotFound)
 		return
 	}
 
-	if err = tmpl.Execute(w, nil); err != nil {
-		fmt.Printf("error %v", err)
+	if err := tmpl.Execute(w, nil); err != nil {
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
 	}
 }

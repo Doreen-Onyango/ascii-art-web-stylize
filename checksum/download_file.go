@@ -14,9 +14,9 @@ const (
 )
 
 var fileURLs = map[string]string{
-	"public/standard.txt":   StandardAsciiURL,
-	"public/shadow.txt":     ShadowAsciiURL,
-	"public/thinkertoy.txt": ThinkertoyAsciiURL,
+	"../public/standard.txt":   StandardAsciiURL,
+	"../public/shadow.txt":     ShadowAsciiURL,
+	"../public/thinkertoy.txt": ThinkertoyAsciiURL,
 }
 
 func DownloadFile(file string) error {
