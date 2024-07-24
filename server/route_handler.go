@@ -25,6 +25,9 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 		cssPath := filepath.Join("..", "templates", "styles.css")
 		http.ServeFile(w, r, cssPath)
 	} else {
+		path := filepath.Join("..", "templates", "error.html")
+		tmpl, _ := template.ParseFiles(path)
+		tmpl.Execute(w, nil)
 		http.NotFound(w, r)
 	}
 }
