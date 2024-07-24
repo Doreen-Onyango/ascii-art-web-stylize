@@ -148,16 +148,14 @@ form input[type="submit"]:hover {
 .output-area {
     padding: 30px;
     border: 1px solid #ccc;
-    background-color: #b3e5fc;
-    min-height: 400px;
+    background-color: white;
+    min-height: 300px;
     white-space: pre;
     font-family: 'Courier New', monospace;
     font-size: 18px;
     line-height: 1.5;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
-    /* overflow-y:clip; */
-    /* overflow: auto; */
     animation: slideInUp 0.5s ease-in-out;
 }
 
