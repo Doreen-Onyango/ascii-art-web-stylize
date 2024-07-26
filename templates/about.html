@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII Art Generator</title>
+    <title>About Us - ASCII Art Generator</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
         <div class="header-container">
             <h1 class="title">ASCII Art Generator</h1>
             <div class="nav-buttons">
-                <a href="/about.html">
-                    <button class="nav-btn">About</button>
+                <a href="/">
+                    <button class="nav-btn">Home</button>
+                </a>
+                <a href="#credits">
+                    <button class="nav-btn">Credits</button>
                 </a>
             </div>
         </div>
     </header>
-    
 
-    <div class="container">
-        <form id="asciiForm" method="post" action="/ascii-art">
-            <textarea id="inputText" name="Input" type="text" placeholder="Enter Input" required></textarea>
+    <main>
+        <section class="about-section">
+            <h2>About ASCII Art Web Stylize</h2>
+            <p>Welcome to the ASCII Art Web Stylize, an innovative tool that transforms text into creative ASCII art. Our web interface is designed to be both intuitive and visually appealing, making it easy for users to generate stunning ASCII art with minimal effort.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>Transform strings into detailed ASCII art</li>
+                <li>Supports a wide range of characters including letters, numbers, and special symbols</li>
+                <li>Multiple banner styles for diverse artistic representations</li>
+                <li>Interactive and user-friendly web interface</li>
+            </ul>
 
-            <div class="radio-group">
-                <label>
-                    <input type="radio" name="Banner" value="standard" checked>
-                    Standard
-                </label>
-                <label>
-                    <input type="radio" name="Banner" value="thinkertoy">
-                    Thinkertoy
-                </label>
-                <label>
-                    <input type="radio" name="Banner" value="shadow">
-                    Shadow
-                </label>
-                <label>
-                    <input type="radio" name="Banner" value="all">
-                    All
-                </label>
-            </div>
+            <h3>Getting Started</h3>
+            <p>To use this tool, you need to have Go installed on your system. Follow these simple steps to get started:</p>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://learn.zone01kisumu.ke/git/khahussein/ascii-art-web.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd ascii-art-web-stylize/cmd/</code></pre>
+                </li>
+                <li>Start the server:
+                    <pre><code>go run .</code></pre>
+                    <p>Access the tool at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></p>
+                </li>
+            </ol>
 
-            <input type="submit" value="Generate ASCII Art">
-        </form>
+            <h3>Example Output</h3>
+            <p>See the ASCII art in action:</p>
+            <img src="public/images/img.png" alt="Example output">
 
-        <div class="output-area" id="asciiResult">
-            <!-- Output will be displayed here -->
-        </div>
+            <h3>Testing & Contributing</h3>
+            <p>To test the application, run:</p>
+            <pre><code>go test -v</code></pre>
+            <p>For more interactive testing, use:</p>
+            <pre><code>curl -X POST -d "Text=Hello World&Banner=standard" http://localhost:8080/ascii-art</code></pre>
+        </section>
+    </main>
 
-    </div>
-    
     <footer>
-        <div class="footer-container">
+        <div class="footer-container" id="credits">>
             <div class="credits">
                 <div class="developer">
                     <a href="https://github.com/Doreen-Onyango" target="_blank">
@@ -88,35 +96,5 @@
             </div>
         </div>
     </footer>
-    
-    <script>
-        document.getElementById('asciiForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const text = document.querySelector('#asciiForm textarea[name="Input"]').value;
-            const banner = document.querySelector('#asciiForm input[name="Banner"]:checked').value;
-
-            const formData = new URLSearchParams();
-            formData.append('Text', text);
-            formData.append('Banner', banner);
-
-            fetch('/ascii-art', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: formData.toString()
-            })
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('.output-area').textContent = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        });
-    </script>
-
 </body>
-
 </html>
