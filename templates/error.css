@@ -1,0 +1,82 @@
+/* General Body Styling for Error Page */
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f8bbd0, #f48fb1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container Styling for Error Page */
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 40px;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom right, #fbe9e7, #ffebee);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Error Content Styling */
+.error-content {
+    text-align: center;
+}
+
+.error-title {
+    font-size: 2.5em;
+    color: #e57373;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.nav-btn {
+    margin-top: 20px;
+    background: #fff;
+    color: #e57373;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background: #ffebee;
+    color: #e57373;
+    transform: translateY(-2px);
+}
