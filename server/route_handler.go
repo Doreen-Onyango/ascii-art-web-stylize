@@ -24,7 +24,16 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/styles.css" {
 		cssPath := filepath.Join("..", "templates", "styles.css")
 		http.ServeFile(w, r, cssPath)
+	} else if r.URL.Path == "/about.html" {
+		about := filepath.Join("..", "templates", "about.html")
+		http.ServeFile(w, r, about)
+	} else if r.URL.Path == "/about.css" {
+		about := filepath.Join("..", "templates", "about.css")
+		http.ServeFile(w, r, about)
 	} else {
+		path := filepath.Join("..", "templates", "error.html")
+		tmpl, _ := template.ParseFiles(path)
+		tmpl.Execute(w, nil)
 		http.NotFound(w, r)
 	}
 }
