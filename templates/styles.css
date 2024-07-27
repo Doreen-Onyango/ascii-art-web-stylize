@@ -22,13 +22,13 @@ body {
 
 /* Container Styling */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 2rem auto;
     padding: 40px;
     background-color: #ffffff;
     background-image: linear-gradient(to bottom right, #bbdefb, #90caf9);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     animation: fadeIn 1s ease-in-out;
 }
 
