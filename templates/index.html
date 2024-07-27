@@ -50,8 +50,11 @@
             <input type="submit" value="Generate ASCII Art">
         </form>
 
-        <div class="output-area" id="asciiResult">
-            <!-- Output will be displayed here -->
+        <div class="output-area-container">
+            <button class="copy-btn" id="copyBtn">Copy</button>
+            <div class="output-area" id="asciiResult">
+                <!-- Output will be displayed here -->
+            </div>
         </div>
         <div class="nav-buttons download">
             <button class="nav-btn" id="downloadBtn">Download</button>
@@ -160,6 +163,16 @@
                 });
         });
 
+        document.getElementById('copyBtn').addEventListener('click', function () {
+            const asciiArt = document.querySelector('.output-area').textContent;
+            navigator.clipboard.writeText(asciiArt)
+                .then(() => {
+                    alert('ASCII art copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+        });
     </script>
 
 </body>
