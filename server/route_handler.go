@@ -35,7 +35,10 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, about)
 	} else {
 		path := filepath.Join("..", "templates", "error.html")
-		tmpl, _ := template.ParseFiles(path)
+		tmpl, err := template.ParseFiles(path)
+		if err == nil {
+			w.WriteHeader(http.StatusNotFound)
+		}
 		tmpl.Execute(w, nil)
 		http.NotFound(w, r)
 	}
