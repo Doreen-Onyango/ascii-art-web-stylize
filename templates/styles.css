@@ -175,3 +175,49 @@ form input[type="submit"]:hover {
 .developer img:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
+
+/* Container for the output area and copy button */
+.output-area-container {
+    position: relative;
+    max-width: 100%;
+}
+/* Container for the output area and copy icon */
+.output-area-container {
+    position: relative;
+    max-width: 100%;
+}
+
+/* Styling the copy icon */
+.copy-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #03a9f4;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.copy-icon:hover {
+    color: #0288d1;
+}
+
+/* Disable the download button initially */
+#downloadBtn:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Style for enabled download button */
+#downloadBtn:not(:disabled) {
+    background-color: #03a9f4;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#downloadBtn:not(:disabled):hover {
+    background-color: #0288d1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
