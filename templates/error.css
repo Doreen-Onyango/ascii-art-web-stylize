@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #f8bbd0, #f48fb1);
+    background: linear-gradient(to bottom right, #e0f7fa, #b3e5fc);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
 }
@@ -26,8 +26,8 @@ body {
     max-width: 600px;
     margin: 2rem auto;
     padding: 40px;
-    background-color: #ffffff;
-    background-image: linear-gradient(to bottom right, #fbe9e7, #ffebee);
+    background-color: #ffffff69;
+    background-image: linear-gradient(to bottom right, #ffffff, #ffffff);
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     animation: fadeIn 1s ease-in-out;
@@ -47,6 +47,8 @@ body {
 /* Error Content Styling */
 .error-content {
     text-align: center;
+    font-weight: 900;
+    color: #f01616;
 }
 
 .error-title {
