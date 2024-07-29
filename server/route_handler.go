@@ -40,6 +40,5 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusNotFound)
 		}
 		tmpl.Execute(w, nil)
-		http.NotFound(w, r)
 	}
 }
