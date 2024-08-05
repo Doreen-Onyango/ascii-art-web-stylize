@@ -225,16 +225,6 @@ form input[type="submit"]:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    align-items: center;
-  
-}
-
-.radio-group h3 {
-    margin-right: 20px;
-    margin: 0;
-    margin-left: 20px;
-    padding: 10px;
-
 }
 
 .radio-group label {
@@ -253,7 +243,7 @@ form input[type="submit"]:hover {
     display: none;
 }
 
-.radio-group input[type="radio"]:checked + label {
+.radio-group input[type="radio"]:checked + a {
     color: #03a9f4;
     font-weight: bold;
 }
