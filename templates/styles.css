@@ -1,3 +1,106 @@
+.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind other content */
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2, 0,6, 1)0%, rgba(9,9,121,1)35%,rgba(0, 212, 255, 1)100%);
+
+}
+h2.art{
+    /* font-family: poppins; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    /* text-transform: uppercase; */
+    margin: 0;
+}
+.box div{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    /* border: 6px solid rgba(255, 255, 255, 0.8); */
+}
+.box div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(2){ 
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(6){
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+.box div:nth-child(7){
+    top: 80%;
+    left: 60%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-child(8){
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.box div:nth-child(9){
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(10){
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1) translateY(0) rotate(0);
+        opacity: 0;
+        shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50%{
+        transform: scale(1.3) translateY(-50px) rotate(300deg) ;
+        opacity: 1;
+        shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100%{
+        transform: scale(1.7) translateY(-100px) rotate(360deg) ;
+        opacity: 0;
+        shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
+
+
+
+
+
 /* General Body Styling */
 body {
     overflow-x: hidden;
@@ -26,8 +129,8 @@ body {
     max-width: 900px;
     margin: 2rem auto;
     padding: 40px;
-    background-color: #ffffff;
-    background-image: linear-gradient(to bottom right, #bbdefb, #90caf9);
+    background-color: #ffffff69;
+    background-image: linear-gradient(to bottom right, #bbdefbb2, #90caf9a9);
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     animation: fadeIn 1s ease-in-out;
@@ -173,5 +276,51 @@ form input[type="submit"]:hover {
 }
 
 .developer img:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Container for the output area and copy button */
+.output-area-container {
+    position: relative;
+    max-width: 100%;
+}
+/* Container for the output area and copy icon */
+.output-area-container {
+    position: relative;
+    max-width: 100%;
+}
+
+/* Styling the copy icon */
+.copy-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #03a9f4;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.copy-icon:hover {
+    color: #0288d1;
+}
+
+/* Disable the download button initially */
+#downloadBtn:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Style for enabled download button */
+#downloadBtn:not(:disabled) {
+    background-color: #03a9f4;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#downloadBtn:not(:disabled):hover {
+    background-color: #0288d1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }

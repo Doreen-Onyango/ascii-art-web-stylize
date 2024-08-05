@@ -30,10 +30,15 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/about.css" {
 		about := filepath.Join("..", "templates", "about.css")
 		http.ServeFile(w, r, about)
+	} else if r.URL.Path == "/error.css" {
+		about := filepath.Join("..", "templates", "error.css")
+		http.ServeFile(w, r, about)
 	} else {
 		path := filepath.Join("..", "templates", "error.html")
-		tmpl, _ := template.ParseFiles(path)
+		tmpl, err := template.ParseFiles(path)
+		if err == nil {
+			w.WriteHeader(http.StatusNotFound)
+		}
 		tmpl.Execute(w, nil)
-		http.NotFound(w, r)
 	}
 }

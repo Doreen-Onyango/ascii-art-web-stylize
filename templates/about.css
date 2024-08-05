@@ -22,7 +22,7 @@ header {
     position: sticky;
     /* Sticks to the top on scroll */
     top: 0;
-    width: 100%;
+    /* width: 100%; */
     z-index: 1000;
 }
 
@@ -185,3 +185,52 @@ footer {
     font-size: 1em;
     color: #fff;
 }
+
+@media (max-width: 767px) {
+    /* Header Styles */
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .title {
+      font-size: 2em;
+    }
+  
+    .nav-buttons {
+      margin-top: 1em;
+    }
+  
+    .nav-btn {
+      font-size: 0.9em;
+      padding: 0.5em 1em;
+    }
+  
+    /* Main Section Styles */
+    .about-section {
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .about-section h2 {
+      font-size: 2em;
+    }
+  
+    .about-section h3 {
+      font-size: 1.5em;
+    }
+  
+    .about-section p {
+      font-size: 1em;
+    }
+  
+    /* Footer Styles */
+    footer {
+      position: static;
+      padding: 0.5em;
+    }
+  
+    .footer-container p {
+      font-size: 0.8em;
+    }
+  }
