@@ -4,8 +4,6 @@ import (
 	"html/template"
 	"net/http"
 	"path/filepath"
-
-	send "stylize/utils"
 )
 
 func Handl(w http.ResponseWriter, r *http.Request) {
@@ -13,7 +11,12 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 		path := filepath.Join("..", "templates", "index.html")
 		tmpl, err := template.ParseFiles(path)
 		if err != nil {
-			send.SendError(w, "Error 404: PAGE NOT FOUND", http.StatusNotFound)
+			path := filepath.Join("..", "templates", "error.html")
+			tmpl, err := template.ParseFiles(path)
+			if err == nil {
+				w.WriteHeader(http.StatusNotFound)
+			}
+			tmpl.Execute(w, nil)
 			return
 		}
 
@@ -30,10 +33,15 @@ func Handl(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/about.css" {
 		about := filepath.Join("..", "templates", "about.css")
 		http.ServeFile(w, r, about)
+	} else if r.URL.Path == "/error.css" {
+		about := filepath.Join("..", "templates", "error.css")
+		http.ServeFile(w, r, about)
 	} else {
 		path := filepath.Join("..", "templates", "error.html")
-		tmpl, _ := template.ParseFiles(path)
+		tmpl, err := template.ParseFiles(path)
+		if err == nil {
+			w.WriteHeader(http.StatusNotFound)
+		}
 		tmpl.Execute(w, nil)
-		http.NotFound(w, r)
 	}
 }
