@@ -30,10 +30,10 @@ func Download(w http.ResponseWriter, r *http.Request) {
 	var asciiArt string
 	if banner == "all" {
 		for _, bn := range []string{"standard", "thinkertoy", "shadow"} {
-			asciiArt += writeAscii(nil, bn, text) + "\n"
+			asciiArt += writeAscii(w, bn, text) + "\n"
 		}
 	} else {
-		asciiArt = writeAscii(nil, banner, text)
+		asciiArt = writeAscii(w, banner, text)
 	}
 	currentYear := time.Now().Year()
 
