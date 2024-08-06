@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ASCII Art Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="title">ASCII Art Generator</h1>
+            <div class="nav-buttons">
+                <a href="/">
+                    <button class="nav-btn">Home</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>About ASCII Art Web Stylize</h2>
+            <p>Welcome to the ASCII Art Web Stylize, an innovative tool that transforms text into creative ASCII art. Our web interface is designed to be both intuitive and visually appealing, making it easy for users to generate stunning ASCII art with minimal effort.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>Transform strings into detailed ASCII art</li>
+                <li>Supports a wide range of characters including letters, numbers, and special symbols</li>
+                <li>Multiple banner styles for diverse artistic representations</li>
+                <li>Interactive and user-friendly web interface</li>
+            </ul>
+
+            <h3>Getting Started</h3>
+            <p>To use this tool, you need to have Go installed on your system. Follow these simple steps to get started:</p>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://learn.zone01kisumu.ke/git/khahussein/ascii-art-web.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd ascii-art-web-stylize/cmd/</code></pre>
+                </li>
+                <li>Start the server:
+                    <pre><code>go run .</code></pre>
+                    <p>Access the tool at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></p>
+                </li>
+            </ol>
+
+            <h3>Testing</h3>
+            <p>To test the application, run:</p>
+            <pre><code>go test -v</code></pre>
+            <p>For more interactive testing, use:</p>
+            <pre><code>curl -X POST -d "Text=Hello World&Banner=standard" http://localhost:8080/ascii-art</code></pre>
+
+            <h3>Example Output</h3>
+            <p>See the ASCII art in action:</p>
+           <pre><code>
+             _    _          _   _                __          __                 _       _  
+            | |  | |        | | | |               \ \        / /                | |     | | 
+            | |__| |   ___  | | | |   ___          \ \  /\  / /    ___    _ __  | |   __| | 
+            |  __  |  / _ \ | | | |  / _ \          \ \/  \/ /    / _ \  | '__| | |  / _` | 
+            | |  | | |  __/ | | | | | (_) |          \  /\  /    | (_) | | |    | | | (_| | 
+            |_|  |_|  \___| |_| |_|  \___/            \/  \/      \___/  |_|    |_|  \__,_| 
+                                                                                            
+                                    
+           </code></pre>
+
+           <h3>Contribution</h3>
+           <p>If you have suggestions for improvements, bug fixes, or new features, feel free to open an issue or submit a pull request.
+            <a href="https://github.com/Doreen-Onyango/ascii-art-web-stylize" target="_blank">Checkout our repo here</a>
+           </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="credits">
+                <div class="developer">
+                    <a href="https://github.com/Doreen-Onyango" target="_blank">
+                        <img src="https://learn.zone01kisumu.ke/git/avatars/8b6aba3403814dc8060be0eca2a89251" alt="Doreen Onyango">
+                    </a>
+                    <p>Doreen Onyango</p>
+                    <a href="https://github.com/Doreen-Onyango" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://ke.linkedin.com/in/doreen-atieno-466104239" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+    
+                <div class="developer">
+                    <a href="https://github.com/kherldhussein" target="_blank">
+                        <img src="https://learn.zone01kisumu.ke/git/avatars/6acb4b5c6cf5b91a9037f7002ef5b900" alt="Khalid Hussein">
+                    </a>
+                    <p>Khalid Hussein</p>
+                    <a href="https://github.com/kherldhussein" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://linkedin.com/in/kherldhussein" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+    
+                <div class="developer">
+                    <a href="https://github.com/Tomlee-abila" target="_blank">
+                        <img src="https://learn.zone01kisumu.ke/git/avatars/6064a47f5fd44b571b14c852996f60a8" alt="Tomlee Abila">
+                    </a>
+                    <p>Tomlee Abila</p>
+                    <a href="https://github.com/Tomlee-abila" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://ke.linkedin.com/in/tomlee-abila-4aa33a236" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

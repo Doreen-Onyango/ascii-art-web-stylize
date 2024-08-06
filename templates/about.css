@@ -1,0 +1,236 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+    /* Modern gradient background */
+    
+}
+
+/* Header Styling */
+header {
+    background: #0277bd;
+    /* Deep blue background */
+    color: #fff;
+    /* White text */
+    padding: 1em 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    display: flex;
+    align-items: center;
+    position: sticky;
+    /* Sticks to the top on scroll */
+    top: 0;
+    /* width: 100%; */
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow for a futuristic look */
+    transition: color 0.3s ease-in-out;
+}
+
+.header-container:hover .title {
+    color: #b3e5fc;
+    /* Light blue color on hover */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    /* Space between buttons */
+}
+
+.nav-btn {
+    margin-top: 20px;
+    background: #fff;
+    /* White background for buttons */
+    color: #0277bd;
+    /* Blue text for buttons */
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 30px;
+    /* Rounded buttons */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+}
+
+.nav-btn:hover {
+    background: #b3e5fc;
+    /* Light blue background on hover */
+    color: #0277bd;
+    /* Blue text on hover */
+    transform: translateY(-2px);
+    /* Subtle lift effect */
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+}
+
+.about-section {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    /* White background */
+    padding: 40px;
+    border-radius: 20px;
+    padding-bottom: 140px;
+    /* More pronounced rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow for depth */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* More intense shadow on hover */
+}
+
+.about-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #0277bd;
+    text-align: center;
+}
+
+.about-section h3 {
+    font-size: 2em;
+    margin-top: 30px;
+    color: #0277bd;
+    border-bottom: 2px solid #0277bd;
+    /* Underline for emphasis */
+    padding-bottom: 5px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #333;
+}
+
+.about-section pre {
+    background: #282c34;
+    /* Dark background for code blocks */
+    color: #f8f8f2;
+    /* Light text color */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+}
+
+.about-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 15px;
+    /* Rounded corners for images */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.about-section img:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #0277bd;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow at the top of the footer */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 1em;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    /* Header Styles */
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .title {
+      font-size: 2em;
+    }
+  
+    .nav-buttons {
+      margin-top: 1em;
+    }
+  
+    .nav-btn {
+      font-size: 0.9em;
+      padding: 0.5em 1em;
+    }
+  
+    /* Main Section Styles */
+    .about-section {
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .about-section h2 {
+      font-size: 2em;
+    }
+  
+    .about-section h3 {
+      font-size: 1.5em;
+    }
+  
+    .about-section p {
+      font-size: 1em;
+    }
+  
+    /* Footer Styles */
+    footer {
+      position: static;
+      padding: 0.5em;
+    }
+  
+    .footer-container p {
+      font-size: 0.8em;
+    }
+  }
