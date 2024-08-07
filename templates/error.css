@@ -23,8 +23,8 @@ body {
 
 /* Container Styling for Error Page */
 .container {
-    max-width: 600px;
-    margin: 2rem auto;
+    max-width: 900px;
+    margin: 20px auto;
     padding: 40px;
     background-color: #ffffff69;
     background-image: linear-gradient(to bottom right, #ffffff, #ffffff);
